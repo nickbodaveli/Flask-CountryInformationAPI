@@ -13,5 +13,5 @@ This project serves as a practical demonstration of:
 
 # Technologies Used
 * Python (Specify version, e.g., 3.7.10 +)
-*Requests (for making HTTP calls)
-*External API: REST Countries API (or whichever API you used)
+* Requests (for making HTTP calls)
+* External API: REST Countries API (or whichever API you used)
