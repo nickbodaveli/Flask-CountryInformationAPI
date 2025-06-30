@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block title %}Country Info{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Search Country Information</h1>
+
+<form method="POST" class="mb-4">
+    <div class="input-group">
+        <input type="text" name="country" class="form-control" placeholder="Enter country name" required>
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+</form>
+
+{% if error %}
+<div class="alert alert-danger">{{ error }}</div>
+{% endif %}
+
+{% if country %}
+<div class="card">
+    <div class="card-header">
+        <h4>{{ country.name }}</h4>
+    </div>
+    <div class="card-body">
+        <p><strong>Capital:</strong> {{ country.capital }}</p>
+        <p><strong>Region:</strong> {{ country.region }}</p>
+        <p><strong>Population:</strong> {{ country.population }}</p>
+        <p><strong>Languages:</strong> {{ country.languages }}</p>
+        <img src="{{ country.flag }}" alt="Flag" width="150">
+    </div>
+</div>
+{% endif %}
+{% endblock %}
